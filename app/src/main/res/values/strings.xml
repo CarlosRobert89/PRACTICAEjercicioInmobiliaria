@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EjercicioInmobiliaria</string>
+    <string name="titulo">CREAR INMUEBLE</string>
+    <string name="tituloEdit">EDITAR INMUEBLE</string>
+    <string name="direccion">Dirección</string>
+    <string name="numero">Número</string>
+    <string name="cp">CP</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="provincia">Provincia</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="insertar">INSERTAR</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="editar">EDITAR</string>
+</resources>
