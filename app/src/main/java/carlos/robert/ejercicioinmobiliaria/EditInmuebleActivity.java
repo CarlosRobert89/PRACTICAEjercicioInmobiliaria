@@ -51,6 +51,7 @@ public class EditInmuebleActivity extends AppCompatActivity {
                     Intent intent3 = new Intent();
                     Bundle bundle3 = new Bundle();
                     bundle3.putSerializable("INMUEBLE", inmuebleEditado);
+                    bundle3.putInt("POSICION", posicion);
                     intent3.putExtras(bundle3);
 
                     setResult(RESULT_OK, intent3);
@@ -63,26 +64,27 @@ public class EditInmuebleActivity extends AppCompatActivity {
     private void rellenarVista(Inmueble inmueble) {
         binding.txtDireccionEditInmueble.setText(inmueble.getDireccion());
         binding.txtNumeroEditInmueble.setText(String.valueOf(inmueble.getNumero()));
-        binding.txtCPEditInmueble.setText(inmueble.getCp());
         binding.txtCiudadEditInmueble.setText(inmueble.getCiudad());
         binding.txtProvinciaEditInmueble.setText(inmueble.getProvincia());
+        binding.txtCPEditInmueble.setText(inmueble.getCp());
         binding.rbValoracionEditInmueble.setRating(inmueble.getValoracion());
     }
 
     private Inmueble crearInmueble() {
         if (binding.txtDireccionEditInmueble.getText().toString().isEmpty()
                 || binding.txtNumeroEditInmueble.getText().toString().isEmpty()
-                || binding.txtCPEditInmueble.getText().toString().isEmpty()
                 || binding.txtCiudadEditInmueble.getText().toString().isEmpty()
-                || binding.txtProvinciaEditInmueble.getText().toString().isEmpty()) {
+                || binding.txtProvinciaEditInmueble.getText().toString().isEmpty()
+                || binding.txtCPEditInmueble.getText().toString().isEmpty()
+                ) {
             return null;
         } else {
             return new Inmueble(
                     binding.txtDireccionEditInmueble.getText().toString(),
                     Integer.parseInt(binding.txtNumeroEditInmueble.getText().toString()),
-                    binding.txtCPEditInmueble.getText().toString(),
                     binding.txtCiudadEditInmueble.getText().toString(),
                     binding.txtProvinciaEditInmueble.getText().toString(),
+                    binding.txtCPEditInmueble.getText().toString(),
                     binding.rbValoracionEditInmueble.getRating()
             );
         }

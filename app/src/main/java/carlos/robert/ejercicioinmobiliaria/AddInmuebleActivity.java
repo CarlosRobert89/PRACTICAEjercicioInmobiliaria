@@ -50,17 +50,18 @@ public class AddInmuebleActivity extends AppCompatActivity {
     private Inmueble crearInmueble() {
         if (binding.txtDireccionAddInmueble.getText().toString().isEmpty()
                 || binding.txtNumeroAddInmueble.getText().toString().isEmpty()
-                || binding.txtCPAddInmueble.getText().toString().isEmpty()
                 || binding.txtCiudadAddInmueble.getText().toString().isEmpty()
-                || binding.txtProvinciaAddInmueble.getText().toString().isEmpty()) {
+                || binding.txtProvinciaAddInmueble.getText().toString().isEmpty()
+                || binding.txtCPAddInmueble.getText().toString().isEmpty()
+) {
             return null;
         } else {
             return new Inmueble(
                     binding.txtDireccionAddInmueble.getText().toString(),
                     Integer.parseInt(binding.txtNumeroAddInmueble.getText().toString()),
-                    binding.txtCPAddInmueble.getText().toString(),
                     binding.txtCiudadAddInmueble.getText().toString(),
                     binding.txtProvinciaAddInmueble.getText().toString(),
+                    binding.txtCPAddInmueble.getText().toString(),
                     binding.rbValoracionAddInmueble.getRating()
             );
         }
